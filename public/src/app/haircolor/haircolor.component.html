@@ -1,0 +1,8 @@
+  <div class="hair_color_selection" >
+    <span *ngFor="let p of project_hair_color">
+    <button (click) = "triggerEvent($event)" class="color_select_button" [style.backgroundColor]="p.hex" ></button>
+    </span>
+
+  </div>
+
+

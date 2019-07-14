@@ -1,0 +1,68 @@
+     <div class="container-fluid">
+
+    <div class="row titlerow justify-content-md-center">
+      <div class="col-md-auto">
+        <h1>Toon Me Up</h1>
+      </div> 
+    </div> 
+  </div> 
+
+    <div class="row svgrow no-gutters justify-content-md-center" >
+        <div class="col colborder" >
+            <div>
+                <svg class="svgstage" id="svg" version="5.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+              </div>
+          
+          <!-- <button id="saveimg" class="btn btn-primary" type="submit">Download Me</button> -->
+        </div> 
+   
+            <div class="col justify-content-center no-gutters">
+          
+          <div [ngSwitch]="showComponent">
+                <div *ngSwitchDefault>
+                     
+                  <ul class="nav nav-pills nav-fill appheaderrow">
+                      
+                        <li class="nav-item custom-nav"><a class="nav-link active"  (click)="showComponent='face'">Face</a></li>
+                        <li class="nav-item custom-nav"><a class="nav-link"  (click)="showComponent='background'">Background</a></li>
+                        <li class="nav-item custom-nav"><a class="nav-link"  (click)="showComponent='hair'">Hair</a></li>
+                      
+                    </ul>
+                    <app-face (showSkinColor)="dataFromFaceChild($event)"></app-face>
+                  </div>
+              
+                <div *ngSwitchCase="'face'">
+                    <ul class="nav nav-pills nav-fill appheaderrow">
+                        <li class="nav-item custom-nav"> <a class="nav-link active" (click)="showComponent='face'">Face</a></li>
+                        <li class="nav-item custom-nav"> <a class="nav-link" (click)="showComponent='background'">Background</a></li>
+                        <li class="nav-item custom-nav"> <a class="nav-link" (click)="showComponent='hair'">Hair</a></li>
+                    </ul>
+              <app-face (showSkinColor)="dataFromFaceChild($event)"></app-face>
+                </div>
+              
+                <div *ngSwitchCase="'background'">
+                    <ul class="nav nav-pills nav-fill appheaderrow">
+                        <li class="nav-item custom-nav"> <a class="nav-link"  (click)="showComponent='face'">Face</a></li>
+                        <li class="nav-item custom-nav"> <a class="nav-link active" (click)="showComponent='background'">Background</a></li>
+                        <li class="nav-item custom-nav"> <a class="nav-link" (click)="showComponent='hair'">Hair</a></li>
+                    </ul>
+                      <app-background (showBkgrColor)="dataFromChild($event)"></app-background>
+                </div>
+              
+                <div *ngSwitchCase="'hair'">
+                    <ul class=" nav nav-pills nav-fill appheaderrow">
+                        <li class="nav-item custom-nav"> <a class="nav-link" (click)="showComponent='face'">Face</a></li>
+                        <li class="nav-item custom-nav"> <a class="nav-link" (click)="showComponent='background'">Background</a></li>
+                        <li class="nav-item custom-nav"> <a class="nav-link active" (click)="showComponent='hair'">Hair</a></li>
+                    </ul>
+                  <app-hair></app-hair>
+                </div>
+       
+          </div> 
+          <!-- /end ngswitch -->
+
+        
+      
+  </div>
+      
+</div> 

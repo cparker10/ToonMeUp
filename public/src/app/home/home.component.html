@@ -1,0 +1,63 @@
+   
+  <div class="container">
+    <div class="row justify-content-center titlerow">
+      <div class="col-6">
+        <h1>Hello Party People</h1>
+      </div> 
+      <!-- //end div col8 -->
+    </div> 
+    <!-- /end title row -->
+
+    <div class="row justify-content-center svgrow">
+        <div class="col-6 ">
+          <svg class="svgstage" id="svg">
+
+            
+          </svg>
+        </div> 
+        <div class="col-1">
+            <div class="color_selection"></div>
+          </div> 
+        <!-- //end div col8 -->
+    </div> 
+    <!-- /end svgrow -->
+    
+
+    <div class="row justify-content-center tabrow">
+      <div class="col-6">
+          <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist"> 
+            <li class="nav-item">
+              <a class="nav-link active" id="face-tab" data-toggle="tab" href="#face" role="tab" aria-controls="face" aria-selected="true">face</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="hair-tab" data-toggle="tab" href="#hair" role="tab" aria-controls="hair" aria-selected="false">hair</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="background-tab" data-toggle="tab" href="#background" role="tab" aria-controls="background" aria-selected="false">background</a>
+            </li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane face-tab active" id="face" role="tabpanel" aria-labelledby="face-tab">Test for face</div>
+            <div class="tab-pane hair-tab" id="hair" role="tabpanel" aria-labelledby="hair-tab">test for hair</div>
+            <div class="tab-pane background-tab" id="background" role="tabpanel" aria-labelledby="background-tab"></div>
+            </div> 
+          <!-- end div tab content -->
+      </div> 
+      <!-- /end div col8 -->
+    </div> 
+    <!-- //end div tabrow -->
+
+    <app-face></app-face>
+    <app-hair></app-hair>
+    <app-background></app-background>
+  </div> 
+  <!-- end div container -->
+    
+    
+
+    
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+
+
+      <div id="skin_color" class="skin_color_selection">
+        
+          <ng-container *ngFor="let p of project_skin_color">
+            <a (click) = "triggerEvent($event)"><button class="color_select_button" [style.backgroundColor]="p.hex" ></button></a>
+          </ng-container>
+        
+      </div>
+ 
+   

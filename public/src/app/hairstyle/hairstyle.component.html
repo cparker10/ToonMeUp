@@ -1,0 +1,13 @@
+<div id="hair" class="hair_style_row">
+  
+  
+    <ng-container *ngFor="let style of project_hair_style; let i = index">
+        <a (click)="clicked(i, $event, style_info)" (click)="toggle(style)" ><img src="./assets/images/hair/{{style.filename}}" alt="{{style.desc}}"></a>
+        
+        
+    </ng-container>
+
+    
+    
+  </div>
+    <!-- //note: <g></g> is unknown in angular -->

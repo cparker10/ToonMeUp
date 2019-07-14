@@ -1,0 +1,8 @@
+
+  <div id="background" class="background_row" >
+
+    <ng-container  *ngFor="let p of project_bkgr">
+       <a (click) = "triggerEvent($event)"><img src="./assets/images/bkgr/{{p.filename}}" alt="{{p.name}}"></a>
+    </ng-container>
+    
+  </div>
