@@ -30,10 +30,16 @@ export class AppComponent implements OnInit {
   ruffleColor: string;
   girl: string;
   message: object;
+  isApple: boolean;
 
   constructor (private data: DataService)  { }
 
   ngOnInit() {
+    var apple = ['iPad', 'iPhone', 'iPod'];
+    if (apple.indexOf(navigator.platform) > -1){
+      this.isApple = true;
+    };
+
     this.s = Snap("#svg");
     this.b = this.s.rect(0,0,800,800);  //for changing background
     this.b.attr({ id: "bgrTest"});  //for changing background

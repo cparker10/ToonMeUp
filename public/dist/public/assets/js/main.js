@@ -1,4 +1,6 @@
-console.log("connected!")
+///check connection
+// console.log("connected!")
+
 //note: snap elements on broswer 'paper' are layered in the reverse order from js.  
 // ie the first js element is at the very back of the browser 'paper'.  
 // the last item in js is in the front of browser paper.  items must appear before code.
@@ -22,21 +24,21 @@ console.log("connected!")
   $(document).ready ( function(){
     //load //this loads face
     Snap.load("./assets/images/Source-Girl_Test.svg", onSVGLoaded3); 
-   
+
   });
 
 
 //method to load svg
 function onSVGLoaded(data) {
   g.append( data );
-  console.log("got it");
+  
 };
 
 //method to load all
 function onSVGLoaded2(data) {
   face = s.group().append( data );
   group.append(face);
-  console.log("got it");
+  
 };
 
 //method to load individual parts
@@ -58,7 +60,7 @@ function onSVGLoaded3(data) {
   braidsGrp.attr({visibility: "hidden"}); //hiding braids on load
   crownGrp = Snap.select("#CrownPuffGroup");
   crownGrp.attr({ visibility: "hidden"}); //hiding crown on load - curly fro should be showing
-  console.log("got it");
+  
 };
 
 
